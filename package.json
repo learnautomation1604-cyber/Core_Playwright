@@ -1,0 +1,23 @@
+{
+  "name": "core_playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/learnautomation1604-cyber/Core_Playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/learnautomation1604-cyber/Core_Playwright/issues"
+  },
+  "homepage": "https://github.com/learnautomation1604-cyber/Core_Playwright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1"
+  }
+}
