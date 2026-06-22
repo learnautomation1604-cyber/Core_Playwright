@@ -1,0 +1,35 @@
+// X Path 
+
+Syntax of the x path - //tagname[@locator='locatorvalue']
+
+// Type of xpath - Aboslute x path and Relative x path
+
+// Absolut xpath -- Its a dynamic in nature - We canot use in the automation 
+
+// Relative xpath -- 100% We should use relative x path in your real time automation
+
+// Type of Relative xpath 
+
+Axes x path 
+
+1. By Tag name - //tagname
+2. By Attribute - 
+3. By Mutiple Attributes - //li[@class='vl-flyout-nav__js-tab']//a[@class='vl-flyout-nav__link-container']//*[text()='Motors']
+4. Using OR -- //*[starts-with(@class, 'btn btn--fluid b' or @class, 'sdfdsf')]
+5. Contins methos - , //*[contains(@class, 'reg-label')],
+6. start-with() - //*[starts-with(@class, 'btn btn--fluid b')]
+7. text() --- //*[text()='Sign in to your account']
+8.contains(text()); ----  //*[contains(text(),'Sign in to your account')] *[contains(@name, 'userid')]
+9. Indexing in reative path ---- (//li[@class='vl-flyout-nav__js-tab'])[3]
+10. last() function
+11. possition()
+12. parent navigation
+13. child navigation
+14. Descendent navigation
+15. Following - Sibling
+16. Preceding - Sibling
+17. Ancestors
+18. Common Relative XPath Patters - By ID, BY Name, By Class, By Placeholder, By Type, By text, By Partial Text, 
+
+Id Based Based x path = //h1[@id='greeting-msg']
+
