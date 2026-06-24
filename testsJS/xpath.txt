@@ -21,14 +21,34 @@ Axes x path
 7. text() --- //*[text()='Sign in to your account']
 8.contains(text()); ----  //*[contains(text(),'Sign in to your account')] *[contains(@name, 'userid')]
 9. Indexing in reative path ---- (//li[@class='vl-flyout-nav__js-tab'])[3]
-10. last() function
-11. possition()
+10. last() function / 11. possition() ---  
+
+await page.locator("//*[@class='vl-flyout-nav__js-tab']").last().click();
+
+await page.locator("//*[@class='vl-flyout-nav__js-tab']").first().click();
+
+await page.locator("//*[@class='vl-flyout-nav__js-tab']").nth(3).click();
+
+
 12. parent navigation
+
+//*[text()='Your recently viewed items']/parent::div[@class='flex justify-between items-end']
+
+
+
 13. child navigation
+
+//div[@class='dp-item-carousel-module__container']/child::div[@class='flex flex-col dp-item-carousel-module__header']
+
 14. Descendent navigation
-15. Following - Sibling
-16. Preceding - Sibling
-17. Ancestors
+
+
+15. Following - Sibling  - //div[@class='dp-item-carousel-module__container']/following::div[@class='flex flex-col dp-item-carousel-module__header']
+16. Preceding - Sibling - //div[@class='dp-item-carousel-module__container']/preceding::div[@class='flex flex-col dp-item-carousel-module__header']
+17. Ancestors 
+
+
+
 18. Common Relative XPath Patters - By ID, BY Name, By Class, By Placeholder, By Type, By text, By Partial Text, 
 
 Id Based Based x path = //h1[@id='greeting-msg']
