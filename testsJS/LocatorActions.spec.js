@@ -91,13 +91,35 @@ import {test} from "@playwright/test"
 
 // });
 
-test("Drop Down Handling", async({page}) =>{
-    await page.goto("https://www.ebay.com");
-    await page.waitForTimeout(6000);
-    await page.locator("//select[@id='gh-cat']").selectOption("Art");
-    await page.waitForTimeout(3000);
-    await page.locator("//select[@id='gh-cat']").selectOption(267);
-    await page.waitForTimeout(3000);
+// test("Drop Down Handling", async({page}) =>{
+//     await page.goto("https://www.ebay.com");
+//     await page.waitForTimeout(6000);
+//     await page.locator("//select[@id='gh-cat']").selectOption("Art");
+//     await page.waitForTimeout(3000);
+//     await page.locator("//select[@id='gh-cat']").selectOption(267);
+//     await page.waitForTimeout(3000);
+
+
+// });
+
+// Select Input fieds 
+
+test('Select Input fields', async({page})=>{
+
+    await page.goto('https://testautomationpractice.blogspot.com/');
+    await page.waitForTimeout(2000);
+    await page.locator("//input[@id='singleFileInput']").scrollIntoViewIfNeeded();
+    await page.waitForTimeout(2000)
+    // Single file upload
+    await page.locator("//input[@id='singleFileInput']").setInputFiles('Inputfiles\\1.png.png');
+    await page.waitForTimeout(2000)
+    await page.locator("//button[normalize-space()='Upload Single File']").click();
+    await page.waitForTimeout(2000)
+    // Mutiple file upload
+    await page.locator("//input[@id='multipleFilesInput']").setInputFiles(['Inputfiles\\1.png.png','Inputfiles\\2.png.png']);
+    await page.waitForTimeout(2000);
+    await page.locator("//button[normalize-space()='Upload Multiple Files']").click(); // //*[text()='Upload Single File']
+    await page.waitForTimeout(2000)
 
 
 });
