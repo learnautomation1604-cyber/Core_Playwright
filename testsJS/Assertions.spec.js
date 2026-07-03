@@ -123,16 +123,16 @@ import { test, expect } from '@playwright/test'
 // Enable/Disable validation
 // Empty validation
 
-// test('Input value validation', async ({ page }) => {
+test('Input value validation', async ({ page }) => {
 
-//     await page.goto('https://www.ebay.com/');
-//     await page.waitForTimeout(2000);
-//     await page.locator("//input[@id='gh-ac']");
-//     await page.waitForTimeout(2000);
-//     await expect(page.locator("//input[@id='gh-ac']")).toBeEmpty();
-//     await page.waitForTimeout(2000);
+    await page.goto('https://www.ebay.com/');
+    await page.waitForTimeout(2000);
+    await page.locator("//input[@id='gh-ac']");
+    await page.waitForTimeout(2000);
+    await expect(page.locator("//input[@id='gh-ac']")).toBeEmpty();
+    await page.waitForTimeout(2000);
 
-// })
+})
 
 // Javascript assertions // Thisasserions not for UI validation - Only test code value validated
 
@@ -153,14 +153,14 @@ import { test, expect } from '@playwright/test'
 
 // Soft assertions
 
-test('Soft assertions', async ({ page }) => {
-    await page.goto('https://www.ebay.com/');
-    await page.waitForTimeout(2000);
-    const title = await page.title();
+// test('Soft assertions', async ({ page }) => {
+//     await page.goto('https://www.ebay.com/');
+//     await page.waitForTimeout(2000);
+//     const title = await page.title();
 
 
-    await expect.soft(title).toBe('Electronics, Cars, Fashion, Collectibles & More | eBay | Official Site');
-    await expect.soft(title).toContain('Electronics, Cars, Fashion, Collectibles & More | eBay | Officia');
-    console.log("This is the page title: "+title);
-});
+//     await expect.soft(title).toBe('Electronics, Cars, Fashion, Collectibles & More | eBay | Official Site');
+//     await expect.soft(title).toContain('Electronics, Cars, Fashion, Collectibles & More | eBay | Officia');
+//     console.log("This is the page title: "+title);
+// });
 // Hard Assertions
