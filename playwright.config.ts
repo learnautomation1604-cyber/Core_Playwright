@@ -22,8 +22,8 @@ export default defineConfig({
     video:{
       mode: 'on',
       size: {
-        width: 800,
-        height: 600
+        width: 1280,
+        height: 720
       }
 
     },
@@ -33,8 +33,9 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    headless: false
+    headless: false,
   },
+  outputDir: 'video',
 
   /* Configure projects for major browsers */
   projects: [
@@ -43,10 +44,10 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
 
     // {
     //   name: 'webkit',
