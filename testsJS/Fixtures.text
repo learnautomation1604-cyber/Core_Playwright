@@ -1,0 +1,7 @@
+// Fixtures -Fixture in a playwright are reusable setup and teardown components that provide test data, Page Objects, or other resource to your test, they avoid repeating the setup code and make test claener and easier to maintain
+
+Type of Fixture - Build In fixture, Custom fixtures 
+
+Build fixtures - page, context, browser, request, browsername
+
+Playwright Hooks - beforeEach, BeforeAll, afterEach, and afterall.
