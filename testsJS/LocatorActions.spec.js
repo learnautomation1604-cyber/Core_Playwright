@@ -111,12 +111,12 @@ test('Select Input fields', async({page})=>{
     await page.locator("//input[@id='singleFileInput']").scrollIntoViewIfNeeded();
     await page.waitForTimeout(2000)
     // Single file upload
-    await page.locator("//input[@id='singleFileInput']").setInputFiles('Inputfiles\\1.png.png');
+    await page.locator("//input[@id='singleFileInput']").setInputFiles('C:\\Users\\LENOVO\\OneDrive\\Documents\\VSCode\\Playwright\\Saravanan\\Core_Playwright\\Inputfiles\\1.png.png');
     await page.waitForTimeout(2000)
     await page.locator("//button[normalize-space()='Upload Single File']").click();
     await page.waitForTimeout(2000)
     // Mutiple file upload
-    await page.locator("//input[@id='multipleFilesInput']").setInputFiles(['Inputfiles\\1.png.png','Inputfiles\\2.png.png']);
+    await page.locator("//input[@id='multipleFilesInput']").setInputFiles(['C:\\Users\\LENOVO\\OneDrive\\Documents\\VSCode\\Playwright\\Saravanan\\Core_Playwright\\Inputfiles\\1.png.png','C:\\Users\\LENOVO\\OneDrive\\Documents\\VSCode\\Playwright\\Saravanan\\Core_Playwright\\Inputfiles\\2.png.png']);
     await page.waitForTimeout(2000);
     await page.locator("//button[normalize-space()='Upload Multiple Files']").click(); // //*[text()='Upload Single File']
     await page.waitForTimeout(2000)
